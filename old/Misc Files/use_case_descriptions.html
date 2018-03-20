@@ -1,0 +1,97 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Use Case Descriptions</title>
+</head>
+<body>
+<p><b>Use Case:</b> Receive Health Care Services<br>
+<b>Context:</b> Provider enters data into terminal (simulated via keyboard input)<br>
+<b>Actors:</b> Provider, Member, and System<br>
+<b>Main Success Scenario:</b><br>
+	&nbsp &nbsp &nbsp1.	When the provider switches their terminal on, it prompts the provider for the 9-digit provider PIN (simulated via screen).<br>
+	&nbsp &nbsp &nbsp2.	The system validates the authentication.<br>
+	&nbsp &nbsp &nbsp3.	The member swipes their card through the terminal’s card reader (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp4.	The system validates the member.<br>
+	&nbsp &nbsp &nbsp5.	The system ejects the card.<br>
+	&nbsp &nbsp &nbsp6.	The provider passes the member card again through the scanner or enters the member’s 9-digit PIN (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp7.	The system validates the member.<br>
+	&nbsp &nbsp &nbsp8.	After validation, the healthcare provider enters the date of the service according to the format “MM-DD-YYYY” to ensure that the <br> &nbsp &nbsp &nbsp &nbsp &nbsp system records all transactions in the event of some unforeseen problem occurring.<br>
+	&nbsp &nbsp &nbsp9.	Provider searches for the correct 6-digit service code by accessing the Provider Directory, based on the service.<br>
+	&nbsp &nbsp &nbsp10.	Provider enters the service code into the terminal (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp11.	The system prints the service name based on the code (up to 20 characters simulated via screen) to the provider’s terminal.<br>
+	&nbsp &nbsp &nbsp12.	The system asks the provider to confirm that the service is correct (simulated via screen).<br>
+	&nbsp &nbsp &nbsp13.	The provider confirms the selection and enters any additional comments about the service (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp14.	The system writes a transaction record to disk that includes the necessary fields (see project description).<br>
+	&nbsp &nbsp &nbsp15.	The system bills ChocAn after a healthcare service.<br>
+	&nbsp &nbsp &nbsp16.	The system ejects the card.<br>
+<b>Extensions:</b><br>
+	&nbsp &nbsp &nbsp8a.  An invalid date format is entered.<br>
+	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp8a.1.  The system informs the provider.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp8a.2.  The provider enters the correct format.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp8a.3.  The use case continues at step 9.<br>
+	&nbsp &nbsp &nbsp10a.  An invalid service code was entered.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp10a.1.  The system informs the provider.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp10a.2.  The provider enters the correct code.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp10a.3.  The use case continues at step 11<br>
+	&nbsp &nbsp &nbsp12a.  The service code is not that which was requested by the provider.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp12a.1.  The provider enters the correct service code.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp12a.2.  The use case continues at step 11.
+<br> <br> <br>
+<b>Use Case:</b> Validation<br>
+<b>Context:</b> The member or provider must interact with the provider terminal and be validated.<br>
+<b>Actors:</b> Member or Provider and ChocAn Data Center Computer<br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	When the provider terminal reads a card or PIN, it dials the ChocAn Data Center.<br>
+&nbsp &nbsp &nbsp2.	The ChocAn Data Center Computer verifies the member’s PIN.<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp2.1.  The ChocAn Data Center Computer communicates with the provider terminal to<br>
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspprint the word “Validated” on the terminal’s one-line display.<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbsp1a.  An invalid provider PIN was entered.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp1a.1.  The system informs the provider and member (simulated via screen) as to<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp the reason for an invalid entry by printing a message such as<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp“Invalid number,” “Member suspended,” etc.  These correspond to <br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspan invalid member number or ChocAn suspending the client’s membership status due to their not paying membership fees for a 
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspmonth or more.
+<br> <br> <br>
+<b>Use Case:</b> Write Transaction Record to Disk<br>
+<b>Context:</b> System writes a file to disk that includes the fields listed below<br>
+<b>Actors: System</b><br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	The system writes a file to disk that includes the fields listed below:<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspToday’s Date and time (MM-DD-YYYY HH:MM:SS)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspDate of Service (MM-DD-YYYY)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspProvider PIN (9 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspMember PIN (9 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspService code (6 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspAdditional (optional) Comments (100 characters)<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone 
+<br> <br> <br>
+<b>Use Case:</b> Bill ChocAn for HealthCare Service extends Receive Healthcare Services<br>
+<b>Context:</b> System looks up appropriate fee for Healthcare service and prints to terminal <br>
+<b>Actors:</b> Provider and System <br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	The system finds the appropriate fee corresponding to the service.<br>
+&nbsp &nbsp &nbsp2.	The system prints the fee on the terminal (simulated via screen).<br>
+&nbsp &nbsp &nbsp3.	The provider enters the date and time of the transaction, current date and time, service code, member’s name and PIN, and fee on <br> &nbsp &nbsp &nbsp &nbsp &nbspanother verification form.<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone
+<br> <br> <br>
+<b>Use Case:</b> Create Provider Directory<br>
+<b>Context:</b> System creates Provider Directory<br>
+<b>Actors:</b> System<br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	The system creates an alphabetically sorted list of healthcare service names, along with their appropriate service codes and fees.<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone
+<br> <br> <br>
+<b>Use Case:</b> Access Provider Directory<br>
+<b>Context:</b> Provider accesses Provider Directory<br>
+<b>Actors:</b> Provider and System<br>
+<b>Main Success Scenario:</b><br>
+1.	The provider requests a Provider Directory from the system.<br>
+2.	The system prints the Provider Directory to the terminal (email simulated through screen output).<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone</p>
+</body>
+</html>

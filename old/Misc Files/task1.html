@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name = "description" content = "Training course">
+  <link rel = "stylesheet" type = "text/css" href = "styles.css">
+  <title>Prof Website | Welcome</title>
+</head>
+<body>
+  <header>
+    <div class = "container">
+      <div id = "branding">
+        <h1><span class = "highlight">CS 200</span> Project Task 1 -  Submitted by Isuru Nanayakkara</h1>
+      </div>
+      <nav>
+        <ul>
+		  <li>				   <a href="report.html">Task 3</a></li>
+          <li>				   <a href="task2.html">Task 2</a></li>
+          <li class = "current"><a href="task1.html">Task 1</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+	<section id = "showcase">
+		<div class = "container">
+		  <h1>Members </h1>
+		  
+		  <section id = "boxes">
+			
+			 <div class = "box">
+				<img src = "https://image.ibb.co/nizMR5/am.png" alt="am" width = 100>
+				<h3>Alan Manning</h3>
+				<p><b>CWID 11339006</b></p>
+				<p><b>aamanning@crimson.ua.edu</b></p>
+				<p><b>Time: 3 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/nyezDk/h.png" alt="h" width = 100>
+				<h3>Hunter Kimbrell</h3>
+				<p><b>CWID 11607902</b></p>
+				<p><b>hjkimbrell@crimson.ua.edu</b></p>
+				<p><b>Time: 3 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/e8WqKQ/i.png" alt="i" width = 100>
+				<h3>Isuru Nanayakkara</h3>
+				<p><b>CWID 11743717</b></p>
+				<p><b>ipnanayakkara@crimson.ua.edu</b></p>
+				<p><b>Time: 3 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/hbtRtk/r.png" alt="r" width = 100>
+				<h3>Richard Rice</h3>
+				<p><b>CWID 11614095</b></p>
+				<p><b>rlrice2@crimson.ua.edu</b></p>
+				<p><b>Time: 3 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/n8S865/rb.png" alt="rb" width = 100>
+				<h3>Robert Bartnett</h3>
+				<p><b>CWID 11710747</b></p>
+				<p><b>rtbartnett@crimson.ua.edu</b></p>
+				<p><b>Time: 3 hours</b></p>
+			  </div>
+			  
+			</section>
+		 </div>
+	 
+    </section>
+	
+	<section id = "showcase_2">
+		<h3> <u>TASK DISTRIBUTION </u></h3>	
+		<p> Part 1 Use Cases:  by Alan Manning and Robert Bartnett [20% contribution each]</p>
+		<p> Part 2 Use Cases: by Richard Rice and Hunter Kimbrell [20% contribution each]</p>
+		<p> Report.html, Styles.css and Glossary by Isuru Nanayakkara [20% contribution]</p>
+		
+		<h3> <u>GLOSSARY</u></h3>	
+		<p><b> Acme Accounting Services: </b>   Acme is a third-party organization and is responsible for financial
+												procedures and reinstating suspended <br> members who have now paid what is owing.
+												The Acme computer updates the relevant ChocAn Data Center computer membership
+												records each evening at 9 P.M.</p>
+		<p><b> Choc An Data Center: </b>        Location where the Choc An Data is stored, organized and utilized</p>
+		<p><b> Electronic Funds Transfer (EFT): </b> The payment made by the customer is done through EFT. Banking computers will later ensure that each provider’s bank account is credited with the
+													 appropriate amount.</p>
+		<p><b> Invalid Number: </b>         Customer number is not registered in system.</p>
+		<p><b> Member suspended: </b>      Customer owes money for the membership fees. Member is suspended.</p>
+		<p><b> Provider: </b>               Each health care professional who provides services to ChocAn members</p>
+		<p><b> Provider Directory: </b>         Lists the appropriate six-digit service
+																code corresponding to the service provided.</p>
+		<p><b> Report: </b>                 A list of services provided to that member, sorted in order of service date.<br> Providers also have a copy of the customers list as well as their own unique report</p>
+		<p><b> Terminal: </b>               System that calls Choc An Data Center after user swipes card.</p>
+		<p><b> Validated: </b>                  Appears when a succesful swipe of the card is registered.</p>
+		
+		<h3> <u> USE CASES </u></h3>	
+		
+		<h3>Alan and Robert</h3>
+	
+		<p><b>Use Case:</b> Receive Health Care Services<br>
+<b>Context:</b> Provider enters data into system (simulated via keyboard input)<br>
+<b>Actors:</b> Provider and Member <!-- was "and System"--><br>
+<b>Main Success Scenario:</b><br>
+	&nbsp &nbsp &nbsp1.	After provider switches terminal on, terminal prompts provider for 9-digit provider PIN (simulated via screen).<br>
+	&nbsp &nbsp &nbsp2.	System validates authentication.<br>
+	&nbsp &nbsp &nbsp3.	Member swipes their card through terminal’s card reader (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp4.	System validates member. <br>
+	&nbsp &nbsp &nbsp5.	System ejects card.<br>
+	&nbsp &nbsp &nbsp6.	Provider passes member card again through scanner or enters member’s 9-digit PIN (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp7.	System validates member.<br>
+	&nbsp &nbsp &nbsp8.	After validation, healthcare provider enters date of service according to the format “MM-DD-YYYY."<br>
+	&nbsp &nbsp &nbsp9.	Provider searches for correct 6-digit service code by accessing Provider Directory.<br>
+	&nbsp &nbsp &nbsp10.	Provider enters service code into terminal (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp11.	System prints service name based on code (up to 20 characters simulated via screen) to provider’s terminal.<br>
+	&nbsp &nbsp &nbsp12.	System prompts provider to confirm service is correct (simulated via screen).<br>
+	&nbsp &nbsp &nbsp13.	Provider confirms selection and enters any additional comments regarding service (simulated via keyboard input).<br>
+	&nbsp &nbsp &nbsp14.	System writes a transaction record to disk with the following fields.<br>
+	&nbsp &nbsp &nbsp &nbsp &nbsp &nbspToday’s Date and time (MM-DD-YYYY HH:MM:SS)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspDate of Service (MM-DD-YYYY)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspProvider PIN (9 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspMember PIN (9 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspService code (6 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspAdditional (optional) Comments (100 characters)<br>
+	&nbsp &nbsp &nbsp15.	System bills ChocAn after healthcare service.<br>
+	&nbsp &nbsp &nbsp16.	System ejects card.<br>
+<b>Extensions:</b><br>
+	&nbsp &nbsp &nbsp8a.  Invalid date format is entered.<br>
+	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp8a.1.  System informs provider.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp8a.2.  Provider enters correct format.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp8a.3.  Use case continues at step 9.<br>
+	&nbsp &nbsp &nbsp10a.  An invalid service code was entered.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp10a.1.  System informs provider.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp10a.2.  Provider enters correct code.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp10a.3.  Use case continues at step 11<br>
+	&nbsp &nbsp &nbsp12a.  Service code is not that which was requested by provider.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp12a.1.  Provider enters correct service code.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp12a.2.  Use case continues at step 11.
+<br> <br> <br>
+<b>Use Case:</b> Validation<br>
+<b>Context:</b> Member or provider must interact with provider terminal and be validated.<br>
+<b>Actors:</b> Member or Provider and ChocAn Data Center Computer<br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	After provider terminal reads card or PIN, it dials ChocAn Data Center.<br>
+&nbsp &nbsp &nbsp2.	ChocAn Data Center Computer verifies member’s PIN.<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp2.1.  ChocAn Data Center Computer communicates with provider terminal to<br>
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspprint “Validated” on terminal’s one-line display.<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbsp1a.  Invalid provider PIN was entered.<br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp1a.1.  System informs provider and member (simulated via screen) as to<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp reason for invalid entry by printing message such as<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp“Invalid number,” “Member suspended,” etc. <br>
+<br> <br> <br>
+<!--<b>Use Case:</b> Write Transaction Record to Disk<br>
+<b>Context:</b> System writes a file to disk that includes the fields listed below<br>
+<b>Actors:</b> Provider --><!--Was "System"--><!--<br>-->
+<!--<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	Provider --><!--system--><!-- uses system to write file to disk that includes fields listed below:<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspToday’s Date and time (MM-DD-YYYY HH:MM:SS)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspDate of Service (MM-DD-YYYY)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspProvider PIN (9 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspMember PIN (9 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspService code (6 digits)<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbspAdditional (optional) Comments (100 characters)<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone 
+<br> <br> <br>-->
+<b>Use Case:</b> Bill ChocAn for HealthCare Service <!--extends Receive Healthcare Services--><br>
+<b>Context:</b> System looks up appropriate fee for Healthcare service and prints to terminal <br>
+<b>Actors:</b> Provider <!-- was "and System"--> <br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	System finds appropriate fee corresponding to service.<br>
+&nbsp &nbsp &nbsp2.	System prints fee on terminal (simulated via screen).<br>
+&nbsp &nbsp &nbsp3.	Provider enters date and time of transaction, current date and time, service code, member’s name and PIN, and fee on <br> &nbsp &nbsp &nbsp &nbsp &nbspanother verification form.<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone
+<br> <br> <br>
+<!--<b>Use Case:</b> Create Provider Directory File <b>extends</b> Provider Accesses Provider Directory<br>
+<b>Context:</b> System creates Provider Directory<br>
+<b>Actors:</b> System<br>
+<b>Main Success Scenario:</b><br>
+&nbsp &nbsp &nbsp1.	The system creates an alphabetically sorted list of healthcare service names, along with their appropriate service codes and fees.<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone
+<br> <br> <br>-->
+<b>Use Case:</b> Access Provider Directory<br>
+<b>Context:</b> Provider accesses Provider Directory<br>
+<b>Actors:</b> Provider <!-- was "and System"--><br>
+<b>Main Success Scenario:</b><br>
+1.	System creates alphabetically sorted list of healthcare names with their service codes and fees.<br>
+2.  Provider requests Provider Directory from system.<br>
+3.	System prints Provider Directory to terminal (email simulated through screen output).<br>
+<b>Extensions:</b><br>
+&nbsp &nbsp &nbspNone</p>
+
+	<h3>Hunter and Richard</h3>
+	
+<strong>Use Case:</strong> Manage Members and Member Records<br>
+<strong>Context:</strong> Member data is added or updated in the system<br>
+<strong>Actors:</strong> Operator, member<br>
+<strong>Main Success Scenario:</strong><br>
+<strong>1.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The operator requests to make a change to member data.<br>
+<strong>2.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The operator chooses to enter, update, or delete any of the following data:<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp 2.1) The member data consists of the following fields:<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Name (25 characters)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Number (9 digits)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Address (25 characters)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp City (14 characters)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp State (2 letters)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ZIP Code (5 digits)<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp 2.2) The operator chooses to enter new member data.<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp 2.3) The operator chooses to update existing member data.<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp 2.4) The operator chooses delete existing member data.<br>
+<strong>Extensions:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.</strong> Operator attempts to update or delete an invalid member<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.1.</strong>&nbsp; The system informs the operator.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.2.</strong>&nbsp; The operator enters the correct member.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.3.</strong>&nbsp; The use case resumes at step 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<strong>Use Case:</strong> Manage Providers and Provider Records<br>
+<strong>Context:</strong> Provider data is added or updated in the system<br>
+<strong>Actors:</strong> Operator, provider<br>
+<strong>Main Success Scenario:</strong><br>
+<strong>1.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The operator requests to make a change to provider data.<br>
+<strong>2.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The operator chooses to enter, update, or delete any of the following data:</p>
+Name (25 characters)<br>
+Number (9 digits)<br>
+Address (25 characters)<br>
+City (14 characters)<br>
+State (2 letters)<br>
+ZIP Code (5 digits)<br>
+<strong>Extensions:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.</strong> Operator attempts to update or delete an invalid provider.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.1.</strong>&nbsp; The system informs the operator.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.2.</strong>&nbsp; The operator enters the correct provider.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>1a.3.</strong>&nbsp; The use case continues at step 2.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<strong>Use Case:</strong> Creation of an EFT File<br>
+<strong>Context:</strong> Creation of a list of funds to be transferred to the bank account of a provider. This is automatically done every Friday at midnight.<br>
+<strong>Actors:</strong> Time, provider<br>
+<strong>Main Success Scenario:</strong><br>
+<strong>1.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Every Friday at midnight, generates an EFT file containing the following for a provider:<br>
+Provider name and number<br>
+Amount to be transferred to the provider&rsquo;s account<br>
+<strong>1.1.</strong>&nbsp;&nbsp; The amount to be transferred to the provider&rsquo;s account is the sum of the cost of all services done by the provider in the past week according to the Bill ChocAn for Healthcare Services</p>
+<strong>2.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step 1 repeats for each provider each Friday at midnight.<br>
+<strong>Extensions:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; None<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+<strong>Use Case:</strong> Write Member Report to File<br>
+<strong>Context:</strong> Each member who has consulted a ChocAn provider during that week receives a list of services provided to that member, sorted in order of service date.<br>
+<strong>Actors:</strong> Time, manager, member<br>
+<strong>Main Success Scenario:</strong><br>
+<strong>1.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Every Friday at midnight, or upon the request of a manager, generates a report that lists the services provided to that member, sorted in order of service date. This report includes the following information about the member:<br>
+Name (25 characters)<br>
+Number (9 digits)<br>
+Address (25 characters)<br>
+City (14 characters)<br>
+State (2 letters)<br>
+ZIP Code (5 digits)<br>
+<strong>1.1.</strong>&nbsp;&nbsp; For each service provided, the report includes the following:<br>
+Date of service (MM-DD-YYYY)<br>
+Provider name (25 characters)<br>
+Service name (20 characters)<br>
+<strong>2.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step 1 repeats for each member each Friday at midnight.<br>
+<strong>Extensions:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+<strong>Use Case:</strong> Write Provider Report to File<br>
+<strong>Context:</strong> Each provider who has billed ChocAn during that week receives a report containing the list of services he or she provided to ChocAn members.&nbsp;<br>
+<strong>Actors:</strong> Time, manager, provider<br>
+<strong>Main Success Scenario:</strong><br>
+<strong>1.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Every Friday at midnight, or upon the request of a manager, generates a report that lists the services provided by that provider to ChocAn members the past week. This report includes the following information about the provider:<br>
+Name (25 characters)<br>
+Number (9 digits)<br>
+Address (25 characters)<br>
+City (14 characters)<br>
+State (2 letters)<br>
+ZIP Code (5 digits)<br>
+<strong>2.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For each service provided, the report then includes the following:<br>
+Date of service (MM-DD-YYYY)<br>
+Date and time data were received by the computer (MM-DD-YYYY HH:MM:SS)<br>
+Member name (25 characters)<br>
+Member number (9 digits)<br>
+Service code (6 digits)<br>
+Fee to be paid (up to $999.99)<br>
+<strong>3.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Commits a summary to the report, including:<br>
+Total number of consultations with members (3 digits)<br>
+Total fee for week (Up to $99,999.99)<br>
+<strong>3.1.&nbsp;&nbsp; </strong>These stats are found/created by accessing the record from Bill ChocAn for Health Services for the provider<br>
+<strong>4.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step 1-3 repeats for each member each Friday at midnight.<br>
+<strong>Extensions:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+&nbsp;<br>
+&emsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+<strong>Use Case:</strong> Generate Summary Report for Manager<br>
+<strong>Context:</strong> A summary report is given to the manager for accounts payable<br>
+<strong>Actors:</strong> Time, manager<br>
+<strong>Main Success Scenario:</strong><br>
+<strong>1.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Every Friday at midnight, or upon the request of a manager, generates a summary report containing the following based on the past week:<br>
+Name of every provider to be paid<br>
+Number of consultations for each provider<br>
+His/her total fee for the week<br>
+Total number of providers who provided services<br>
+Total number of consultations<br>
+Overall fee<br>
+<strong>Extensions:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; None<br>
+		
+	</section>
+   
+</body>
+</html>

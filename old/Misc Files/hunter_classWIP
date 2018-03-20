@@ -1,0 +1,133 @@
+Provider
+-name : string
+-number : string
+-address : string
+-city : string
+-state : string
+-zip : string
+---------------------------
++getName() : string
++getNumber() : string
++getAddress() : string
++getCity() : string
++getState() : string
++getZip() : string
+
+Member
+-name : string
+-number : string
+-address : string
+-city : string
+-state : string
+-zip : string
+---------------------------
++getName() : string
++getNumber() : string
++getAddress() : string
++getCity() : string
++getState() : string
++getZip() : string
+
+
+
+
+TransactionRecord
+-currentDateTime : DateTime
+-serviceDate : DateTime
+-provider : Provider
+-member : Member
+-serviceCode : int
+-comments : string
+-fee : double
+---------------------------
++getServiceDate() : DateTime
++getServiceCode() : int
++getComments() : String
++getFee() : double
++writeServiceDate()
++writeProviderNumber()
++writeMemberNumber()
++writeServiceCode()
++writeComments()
++writeFee()
+
+EFT
+-transactionArray : ArrayList<TransactionRecord>
+---------------------------
++sortArrayByProviderNumber()
++generateEFTFile()
++traverseArray()
++writeProvider()
++writeAmountDue()
++calculateAmountDue() : double
+
+SummaryReport
+-transactionArray : ArrayList<TransactionRecord>
+----------------------------
+-individualConsultationCounter : int
+-individualFee : double
+-totalProviderCounter : int
+-totalConsultationCounter : int
+-overallFee : double
+---------------------------
++sortArrayByProviderNumber()
++generateSummaryReport()
++traverseArray()
++writeProvider()
++writeAmountDue()
++calculateAmountDue() : double
+
+Timer
+-------------------------
++checkFridayMidnight() : bool
++initiateWeeklyMaintenance()
++clearOldTransactionRecords()
++initiateEFT(ArrayList<TransactionRecord>)
++initiateMemberReport(ArrayList<TransactionRecord>)
++initiateProviderReport(ArrayList<TransactionRecord>)
++initiateSummaryReport(ArrayList<TransactionRecord>)
+
+BillChocAn
+-serviceCode : int
+-serviceDate : DateTime
+-transactionTime : DateTime
+-theMember : Member
+-fee : double
+-theRecord : TransactionRecord
+--------------------------
++inputServiceCode()
++checkValidCode() : bool
++verifyServiceName() : bool
++inputComments()
++inputCurrentDateTime()
++inputMemberName()
++inputMemberPIN()
++lookupFee() : double
++printFee()
++getRecord() : transactionRecord
+
+DateTime
+-numberDay : int
+-month : int
+-dayOfMonth : int
+-year : int
+-hour : int
+-minute : int
+-second : int
+------------------------
++setToCurrentDateTime() : void
++setNumberDay()
++setMonth()
++setDayOfMonth()
++setYear()
++setHour()
++setMinute()
++setSecond()
++getNumberDay() : int
++getMonth() : int
++getDayOfMonth() : int
++getYear() : int
++getHour() : int
++getMinute() : int
++getSecond() : int
+

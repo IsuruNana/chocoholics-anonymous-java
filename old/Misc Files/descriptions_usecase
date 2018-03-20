@@ -1,0 +1,133 @@
+Use Case: Manage Members and Member Records
+Context: Member data is added or updated in the system
+Actors: Operator, member
+Main Success Scenario:
+1.	The operator requests to make a change to member data.
+2.	The operator changes member data:
+	2a) The member data consists of the following fields:
+	Name (25 characters)
+	Number (9 digits)
+	Address (25 characters)
+	City (14 characters)
+	State (2 letters)
+	ZIP Code (5 digits)
+	2b) The operator chooses to enter new member data.
+	2c) The operator chooses to update existing member data.
+	2d) The operator chooses delete existing member data.
+Extensions:
+	1a. Operator attempts to update or delete an invalid member
+		1a.1.  The system informs the operator.
+		1a.2.  The operator enters the correct member.
+		1a.3.  The use case resumes at step 2
+	
+	
+	
+	
+	
+Use Case: Manage Providers and Provider Records
+Context: Provider data is added or updated in the system
+Actors: Operator, provider
+Main Success Scenario:
+1.	The operator requests to make a change to provider data.
+2.	The operator changes provider data.
+	2a) The provider data consists of the following fields:
+	Name (25 characters)
+	Number (9 digits)
+	Address (25 characters)
+	City (14 characters)
+	State (2 letters)
+	ZIP Code (5 digits)
+	2b) The operator chooses to enter new provider data.
+	2c) The operator chooses to update existing provider data.
+	2d) The operator chooses delete existing provider data.
+Extensions:
+	1a. Operator attempts to update or delete an invalid provider.
+		1a.1.  The system informs the operator.
+		1a.2.  The operator enters the correct provider.
+		1a.3.  The use case continues at step 2.
+
+	
+	
+	
+	
+Use Case: Creation of an EFT File
+Context: Creation of a list of funds to be transferred to the bank account of a provider. This is automatically done every Friday at midnight.
+Actors: Time, provider
+Main Success Scenario:
+1.	Every Friday at midnight, generates an EFT file containing the following for a provider:
+Provider name and number
+Amount to be transferred to the provider’s account
+1.1.	The amount to be transferred to the provider’s account is the sum of the cost of all services done by the provider in the past week according to the Bill ChocAn for Healthcare Services
+2.	Step 1 repeats for each provider each Friday at midnight.
+Extensions:
+	None
+
+
+
+
+
+Use Case: Write Member Report to File
+Context: Each member who has consulted a ChocAn provider during that week receives a list of services provided to that member, sorted in order of service date.
+Actors: Time, manager, member
+Main Success Scenario:
+1.	Every Friday at midnight, or upon the request of a manager, generates a report that lists the services provided to that member, sorted in order of service date. This report includes the following information about the member:
+Name (25 characters)
+Number (9 digits)
+Address (25 characters)
+City (14 characters)
+State (2 letters)
+ZIP Code (5 digits)
+1.1.	For each service provided, the report includes the following:
+Date of service (MM-DD-YYYY)
+Provider name (25 characters)
+Service name (20 characters)
+2.	Step 1 repeats for each member each Friday at midnight.
+Extensions:
+	None
+
+
+
+
+Use Case: Write Provider Report to File
+Context: Each provider who has billed ChocAn during that week receives a report containing the list of services he or she provided to ChocAn members.  
+Actors: Time, manager, provider
+Main Success Scenario:
+1.	Every Friday at midnight, or upon the request of a manager, generates a report that lists the services provided by that provider to ChocAn members the past week. This report includes the following information about the provider:
+Name (25 characters)
+Number (9 digits)
+Address (25 characters)
+City (14 characters)
+State (2 letters)
+ZIP Code (5 digits)
+2.	For each service provided, the report then includes the following:
+Date of service (MM-DD-YYYY)
+Date and time data were received by the computer (MM-DD-YYYY HH:MM:SS)
+	Member name (25 characters)
+	Member number (9 digits)
+	Service code (6 digits)
+	Fee to be paid (up to $999.99)
+3.	Commits a summary to the report, including:
+Total number of consultations with members (3 digits)
+Total fee for week (Up to $99,999.99) 
+3.1.	These stats are found/created by accessing the record from Bill ChocAn for Health Services for the provider
+4.	Step 1-3 repeats for each member each Friday at midnight.
+Extensions:
+	 None
+
+ 
+ 
+ 
+ 
+Use Case: Generate Summary Report for Manager
+Context: A summary report is given to the manager for accounts payable
+Actors: Time, manager
+Main Success Scenario:
+1.	Every Friday at midnight, or upon the request of a manager, generates a summary report containing the following based on the past week:
+Name of every provider to be paid
+Number of consultations for each provider
+His/her total fee for the week
+Total number of providers who provided services
+Total number of consultations
+Overall fee
+Extensions:
+	None

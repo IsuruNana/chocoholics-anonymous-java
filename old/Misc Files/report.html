@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name = "description" content = "Training course">
+  <link rel = "stylesheet" type = "text/css" href = "styles.css">
+  <title>Prof Website | Welcome</title>
+</head>
+<body>
+  <header>
+    <div class = "container">
+      <div id = "branding">
+        <h1><span class = "highlight">CS 200</span> Project Task 1 -  Submitted by Isuru Nanayakkara</h1>
+      </div>
+      <nav>
+        <ul>
+		  <li class = "current"><a href="report.html">Task 3</a></li>
+          <li>                  <a href="task2.html">Task 2</a></li>
+          <li>					<a href="task1.html">Task 1</a></li>
+        </ul>
+      </nav
+    </div>
+  </header>
+  
+	<section id = "showcase">
+		<div class = "container">
+		  <h1>Members </h1>
+		  
+		  <section id = "boxes">
+			
+			 <div class = "box">
+				<img src = "https://image.ibb.co/nizMR5/am.png" alt="am" width = 100>
+				<h3>Alan Manning</h3>
+				<p><b>CWID 11339006</b></p>
+				<p><b>aamanning@crimson.ua.edu</b></p>
+				<p><b>Time: 6 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/nyezDk/h.png" alt="h" width = 100>
+				<h3>Hunter Kimbrell</h3>
+				<p><b>CWID 11607902</b></p>
+				<p><b>hjkimbrell@crimson.ua.edu</b></p>
+				<p><b>Time: 5.5 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/e8WqKQ/i.png" alt="i" width = 100>
+				<h3>Isuru Nanayakkara</h3>
+				<p><b>CWID 11743717</b></p>
+				<p><b>ipnanayakkara@crimson.ua.edu</b></p>
+				<p><b>Time: 5 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/hbtRtk/r.png" alt="r" width = 100>
+				<h3>Richard Rice</h3>
+				<p><b>CWID 11614095</b></p>
+				<p><b>rlrice2@crimson.ua.edu</b></p>
+				<p><b>Time: 5.5 hours</b></p>
+			  </div>
+			  
+			  <div class = "box">
+				<img src = "https://image.ibb.co/n8S865/rb.png" alt="rb" width = 100>
+				<h3>Robert Bartnett</h3>
+				<p><b>CWID 11710747</b></p>
+				<p><b>rtbartnett@crimson.ua.edu</b></p>
+				<p><b>Time: 6 hours</b></p>
+			  </div>
+			  
+			</section>
+		 </div>
+	 
+    </section>
+	
+	<section id = "showcase_2">
+		<h3> <u>TASK DISTRIBUTION </u></h3>	
+		<ul>
+		<li>Alan Manning: Corrections for previous project, class diagram, and summarized report.html (alan_header.html) (25%).</li>
+		<li>Isuru Nanayakkara: Wrote paragraph for Task III, aided in construction of class diagram, and summarized report.html, and submitted final report.html file. (15%).</li>
+		<li>Robert Bartnett: Corrections for previous project, 1/2 of the sequence diagrams, and summarized report.html (25%).</li>
+		<li>Richard Rice: 1/2 of the sequence diagrams, and summarized report.html (20%).</li>
+		<li>Hunter Kimbrell: 1/2 of the class diagrams, and summarized report.html (15%).</li></p>
+		</ul>
+	
+	<h3> <u>CLASS DIAGRAM</u></h3>
+	
+	<img src="ClassDiagram/ClassDiagram.jpg" alt="Class diagram">
+	
+	<h3> <u>SEQUENCE DIAGRAMS</u></h3>
+	
+	<img src="Project3SequenceDiagramsRichard/ImageFiles/AccessProviderDirectory.png" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRichard/ImageFiles/BillChocAnForHealthCareService.jpg" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRichard/ImageFiles/CreationofanEFTFile.png" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRichard/ImageFiles/GenerateSummaryReportforManager.png" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRichard/ImageFiles/ReceiveHealthCareServices.png" alt="Class diagram">
+	
+	<img src="Project3SequenceDiagramsRobert/ImageFiles/ManageMembersandMemberRecords.jpg" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRobert/ImageFiles/ManageProvidersandProviderRecords.jpg" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRobert/ImageFiles/WriteMemberReporttoFile.jpg" alt="Class diagram">
+	<img src="Project3SequenceDiagramsRobert/ImageFiles/WriteProviderReporttoFile.jpg" alt="Class diagram">
+		
+	<h3> <u>COHESION AND COUPLING ANALYSIS</u></h3>	
+	
+	<h4> Cohesion and Coupling <h4>
+	
+	<ol>
+		<li> Member and Provider extend the User class because they share fields and operations. (Functional Cohesion)</li>
+		<li> The Member and Provider interact with Operator seperately. (Low Coupling) </li>
+		<li> Provider directory interacts with Provider, Member Records and Member Report. (Data Coupling) </li>
+	
+	</ol>
+	
+	<h4> Why the deisgn is good?<h4>
+	
+	<p>None of the classes have unrelated actions within their implementation. This avoids coincidental cohesion.<br>  
+	The abstract classes User, Records and Report are easily reusable as they define a very generalized class that can be extended efficiently.<br>
+	The Records classes perform only one operation (printDetails()) and this promotes functional cohesion. <br>
+	The Timer class performs weekly updates to its communicating classes and as a result performs Temporal Cohesion. <br>
+	Because of its ability to control other classes and send control over to them it also has control coupling. <br>
+	Both aspects promote a strong structure. The BillChocAn and Provider classes are interact with each other but <br>
+	perform operations that take in less than or equal to 1 parameter. <br>
+	Changes in BillChocAn or Provider should not affect their individual functionality. This way they are strongly data coupled.<br>
+	In summary our design has classes that have high cohesion and low coupling of modules.  <br> </p>
+	
+			
+</body>
+</html>

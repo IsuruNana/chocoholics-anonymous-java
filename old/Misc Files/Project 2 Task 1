@@ -1,0 +1,7 @@
+Creation of EFT file is computerized. It is done by accesssing databases and running server side code.
+The data will be stored in the Choc An Data Center as per the requirements. 
+Some of the hardware required will be the terminal card reader, 
+servers to connect and store the data as well as modems and routers to connect to the internet. 
+The system will have to work with a banking system to manage financial records. 
+It will also work with a delivery system to manage imports and exports. 
+Users will swipe their cards and get immediate feedback from the terminal.
